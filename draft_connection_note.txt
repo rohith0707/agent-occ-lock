@@ -1,0 +1,1 @@
+Hey {first_name}, saw your piece on parallel agents. Hit that 96% lost-update bug on tools. Built a tiny OCC engine with 3-way delta merging: github.com/rohith0707/agent-occ-lock. Best, Rohith

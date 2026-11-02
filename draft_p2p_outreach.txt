@@ -1,0 +1,9 @@
+Hey {first_name}.
+
+Read your tech breakdown on orchestrating parallel agent nodes. We'd run into the exact same lost-update collision where 96% of state writes got silently overwritten across 25 concurrent workers during 2-3s tool calls.
+
+Frustrating bug.
+
+So I put together a tiny OCC engine with 3-way delta auto-merging that didn't need locks: github.com/rohith0707/agent-occ-lock. It preserved 100% of updates in our tests.
+
+How's your team handling worker state isolation?
