@@ -177,7 +177,22 @@ tests/test_concurrency.py::test_stale_commit_rejection_without_merge PASSED
 tests/test_concurrency.py::test_three_way_auto_merge_disjoint_fields PASSED
 tests/test_concurrency.py::test_three_way_collision_detection PASSED
 tests/test_concurrency.py::test_concurrent_agent_swarm_zero_lost_updates PASSED
+tests/test_mcp_server.py::test_mcp_read_and_commit PASSED
 ```
+
+---
+
+## Model Context Protocol (MCP) Server
+
+`agent-occ-lock` ships with native MCP 2.x support over `stdio`, enabling Claude Desktop, Cursor, and any MCP client to enforce optimistic concurrency over shared agent memory:
+
+```bash
+python -m agent_occ.mcp_server
+```
+
+### Exposed MCP Tools
+- `read_agent_state(key)`: Returns state snapshot, revision version, and SHA-256 ETag.
+- `commit_agent_state_occ(key, expected_version, delta, agent_id, auto_merge=True)`: Atomically commits state updates or reconciles disjoint deltas with 0% data loss.
 
 ---
 
