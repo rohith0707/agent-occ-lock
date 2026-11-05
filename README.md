@@ -7,6 +7,10 @@
 
 Optimistic Concurrency Control (OCC) and 3-way delta state resolution for distributed multi-agent LLM systems.
 
+> [!TIP]
+> **Looking for the production client acquisition engine?**
+> Deploy [**Jarvas Lead Hunter**](https://balsarohith.gumroad.com/l/LeadHunter/PEUZKQ0) — the complete self-hosted client acquisition kit built on `agent-occ-lock` with FastAPI, Streamlit, and a 5-check humanizer panel (**$150 Off Early Bird Offer: $149**).
+
 ---
 
 ## The Problem: The Multi-Agent Lost Update Crisis
