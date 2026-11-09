@@ -3,6 +3,8 @@
 [![CI Tests](https://img.shields.io/badge/tests-5%20passed-brightgreen.svg)]()
 [![Zero Dependencies](https://img.shields.io/badge/dependencies-zero-blue.svg)]()
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)]()
+[![TrustMRR Verified](https://img.shields.io/badge/TrustMRR-Startup%20Listing%20($25k)-0052FF.svg)](https://trustmrr.com/startup/leadflow-ai)
+[![Gumroad Product](https://img.shields.io/badge/Gumroad-LeadHunter%20($149)-FF90E8.svg)](https://balsarohith.gumroad.com/l/LeadHunter)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Optimistic Concurrency Control (OCC) and 3-way delta state resolution for distributed multi-agent LLM systems.
