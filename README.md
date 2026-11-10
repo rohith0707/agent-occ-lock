@@ -3,9 +3,9 @@
 [![CI Tests](https://img.shields.io/badge/tests-5%20passed-brightgreen.svg)]()
 [![Zero Dependencies](https://img.shields.io/badge/dependencies-zero-blue.svg)]()
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)]()
-[![Product Hunt Launch](https://img.shields.io/badge/Product%20Hunt-llm--cost--watch-orange?style=flat&logo=producthunt)](https://www.producthunt.com/products/llm-cost-watch)
-[![TrustMRR Verified](https://img.shields.io/badge/TrustMRR-Startup%20Listing%20($25k)-0052FF.svg)](https://trustmrr.com/startup/leadflow-ai)
-[![Gumroad Starter](https://img.shields.io/badge/Gumroad-LeadHunter%20Starter%20($19)-FF90E8.svg)](https://balsarohith.gumroad.com/l/LeadHunter)
+[![AgentControl Commercial](https://img.shields.io/badge/Commercial%20License-AgentControl%20($149)-00C853.svg)](https://balsarohith.gumroad.com/l/vnztsy)
+[![LeadHunter Pro](https://img.shields.io/badge/LeadHunter%20Pro-5,000%20Leads%20($97)-FF90E8.svg)](https://balsarohith.gumroad.com/l/LeadHunter)
+[![Whop Store](https://img.shields.io/badge/Whop-Verified%20Store-blue.svg)](https://whop.com/checkout/plan_BHAobTHbElFCx/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 Optimistic Concurrency Control (OCC) and 3-way delta state resolution for distributed multi-agent LLM systems.
@@ -15,9 +15,10 @@ Optimistic Concurrency Control (OCC) and 3-way delta state resolution for distri
 > We released a full 1080p video teardown explaining compounding token spikes and multi-agent state concurrency.  
 > ▶️ **[Watch / Download the Explainer Video (MP4)](https://github.com/rohith0707/llm-cost-watch/releases/download/v1.0.0/llm_cost_watch_explainer.mp4)**
 
-> [!TIP]
-> **Looking for the production client acquisition engine?**
-> Deploy [**Jarvas Lead Hunter**](https://balsarohith.gumroad.com/l/LeadHunter) — the complete self-hosted client acquisition kit built on `agent-occ-lock` with FastAPI, Streamlit, and a 5-check humanizer panel (**Flash Sale Offer: $19**).
+> [!IMPORTANT]
+> **🚀 Deploy the Production Enterprise Engine (`AgentControl`)**  
+> Looking for the complete production concurrency suite with Redis clustering, FastMCP drop-in decorators, and Prometheus telemetry?  
+> 📦 **Get [AgentControl Starter Kit ($149)](https://balsarohith.gumroad.com/l/vnztsy)** (Commercial License) or get the **[LeadHunter Pro 5,000 AI Founder Engine ($97)](https://balsarohith.gumroad.com/l/LeadHunter)**.
 
 ---
 
