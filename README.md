@@ -1,8 +1,9 @@
 # agent-occ-lock
 
-[![CI Tests](https://img.shields.io/badge/tests-5%20passed-brightgreen.svg)]()
+[![CI Tests](https://img.shields.io/badge/tests-9%20passed-brightgreen.svg)]()
 [![Zero Dependencies](https://img.shields.io/badge/dependencies-zero-blue.svg)]()
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)]()
+[![Ruflo Swarms](https://img.shields.io/badge/Ruflo-Swarm%20Native-00bcd4.svg)](https://github.com/ruvnet/ruflo)
 [![AgentControl Commercial](https://img.shields.io/badge/Commercial%20License-AgentControl%20($149)-00C853.svg)](https://balsarohith.gumroad.com/l/vnztsy)
 [![LeadHunter Pro](https://img.shields.io/badge/LeadHunter%20Pro-5,000%20Leads%20($97)-FF90E8.svg)](https://balsarohith.gumroad.com/l/LeadHunter)
 [![Whop Store](https://img.shields.io/badge/Whop-Verified%20Store-blue.svg)](https://whop.com/checkout/plan_BHAobTHbElFCx/)
@@ -126,6 +127,41 @@ result = store.commit(
 
 if result.success:
     print(f"Committed! New version: {result.record.version}")
+```
+
+### Ruflo (Claude Flow) Multi-Agent Swarm Orchestration
+
+When running multi-player agent swarms in **[Ruflo](https://github.com/ruvnet/ruflo)** (`ruvnet/ruflo`), concurrent subagents execute across different latency windows and write results back into a shared task session. `RufloSwarmCoordinator` guarantees zero lost updates via atomic 3-way delta reconciliation:
+
+```python
+from agent_occ import RufloSwarmCoordinator
+
+coordinator = RufloSwarmCoordinator()
+
+# 1. Initialize shared swarm session
+coordinator.init_swarm_session("ruflo_task_101", {"status": "in_progress"})
+
+# 2. Subagent 1 (Repo Scanner) commits research findings
+coordinator.commit_agent_step(
+    session_id="ruflo_task_101",
+    agent_id="agent_repo_scanner",
+    expected_revision=1,
+    delta={"repo_analysis": {"stars": 81420, "language": "TypeScript"}}
+)
+
+# 3. Subagent 2 (Tech Stack Miner) finishes 800ms later from stale revision 1
+# -> Automatically 3-way merged! 0 lost writes, 0 LLM rerun cost.
+res = coordinator.commit_agent_step(
+    session_id="ruflo_task_101",
+    agent_id="agent_stack_miner",
+    expected_revision=1,
+    delta={"tech_stack": ["FastMCP", "Redis", "LangGraph"]},
+    auto_merge=True
+)
+
+# 4. Export Ruflo / AgentDB compatible manifest
+manifest = coordinator.export_ruflo_manifest("ruflo_task_101")
+print(f"Swarm Transactions: {manifest['transaction_count']}")
 ```
 
 ### High-Level Async Swarm Worker (Auto-Retry + 3-Way Merge)
