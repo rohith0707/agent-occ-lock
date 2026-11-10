@@ -10,6 +10,11 @@
 
 Optimistic Concurrency Control (OCC) and 3-way delta state resolution for distributed multi-agent LLM systems.
 
+> [!NOTE]
+> **📺 90-Second Architecture Explainer Video Walkthrough**  
+> We released a full 1080p video teardown explaining compounding token spikes and multi-agent state concurrency.  
+> ▶️ **[Watch / Download the Explainer Video (MP4)](https://github.com/rohith0707/llm-cost-watch/releases/download/v1.0.0/llm_cost_watch_explainer.mp4)**
+
 > [!TIP]
 > **Looking for the production client acquisition engine?**
 > Deploy [**Jarvas Lead Hunter**](https://balsarohith.gumroad.com/l/LeadHunter) — the complete self-hosted client acquisition kit built on `agent-occ-lock` with FastAPI, Streamlit, and a 5-check humanizer panel (**Flash Sale Offer: $19**).
